@@ -14,8 +14,10 @@
 <meta name="twitter:title" content="포장이사보관"/>
 <meta name="twitter:url" content="/"/>
 <meta name="twitter:image" content="https://financial.pstatic.net/insurance/insurance_car.png"/>
+<meta name="google-site-verification" content="IE4WavsHiVEvCOkq7IH8v_w3p5fwUSxwibeOmrGUtP0" />
+<meta name="naver-site-verification" content="f8108426f793c9ebef157134562a8d860b9b1bcd" />
 
-
+	
 <meta name="subject" content="포장이사보관" />
 <meta name="publisher" content="포장이사보관" />
 <meta name="Other Agent" content="포장이사보관" />
@@ -458,22 +460,26 @@
 
 
   
-
 <footer style="font-size: 11px; color: #888; padding: 30px 20px; text-align: center; line-height: 1.8; font-family: sans-serif;">
-  
   <div style="margin-bottom: 8px;">
-    © 2026. 포장이사보관. All rights reserved.
+    © 2026. <span id="site-title"></span>. All rights reserved.
   </div>
 
   <div style="color: #ccc;">
     <span id="bot-msg">데이터 동기화 중...</span> | 
     최종 업데이트: <time id="bot-date" datetime=""></time>
   </div>
-
 </footer>
 
 <script>
   (function() {
+    // 1. 사이트 타이틀 자동 삽입 (요청하신 코드 추가됨)
+    const siteTitleElem = document.getElementById('site-title');
+    if (siteTitleElem) {
+      siteTitleElem.textContent = document.title || "My Website"; 
+    }
+
+    // 2. 날짜 및 시간 설정
     const d = new Date();
     const year = d.getFullYear();
     const month = String(d.getMonth() + 1).padStart(2, '0');
@@ -489,12 +495,13 @@
       dateElem.setAttribute('datetime', formattedDate); 
     }
 
+    // 3. 동적 상태 메시지
     if(msgElem) {
       const msgs = ["정보 유효성 검토 완료", "실시간 데이터 업데이트됨", "최신 가이드라인 준수", "콘텐츠 정기 점검 완료", "시스템 정보 동기화 완료"];
       msgElem.textContent = msgs[d.getDate() % msgs.length];
     }
 
-    // SEO 최적화 (JSON-LD)
+    // 4. SEO 최적화 (JSON-LD)
     const jsonLd = {
       "@context": "https://schema.org",
       "@type": "WebPage",
@@ -506,7 +513,7 @@
     script.text = JSON.stringify(jsonLd);
     document.head.appendChild(script);
 
-    // 메타 태그
+    // 5. 메타 태그 업데이트
     const metaData = [
       { name: "revised", content: formattedDate },
       { property: "article:modified_time", content: fullISO }
@@ -520,6 +527,7 @@
     });
   })();
 </script>
+
 
 
 
@@ -590,5 +598,6 @@
 <link rel="preload" href="https://static.cdninstagram.com/rsrc.php/v4is0w4/yb/l/ko_KR/rFkiMP1qMyJ.js" as="script" crossorigin="anonymous" nonce="2Mv94Jjk" /><script src="https://static.cdninstagram.com/rsrc.php/v4is0w4/yb/l/ko_KR/rFkiMP1qMyJ.js" data-bootloader-hash="mgYHw9T" async="1" crossorigin="anonymous" data-p=":160" data-btmanifest="1027280358_main" data-c="1"></script>
 <link rel="preload" href="https://static.cdninstagram.com/rsrc.php/v4iT4H4/yV/l/ko_KR/zWc0yd6V0XD.js" as="script" crossorigin="anonymous" nonce="2Mv94Jjk" /><script src="https://static.cdninstagram.com/rsrc.php/v4iT4H4/yV/l/ko_KR/zWc0yd6V0XD.js" data-bootloader-hash="cDTWgQH" async="1" crossorigin="anonymous" data-p=":139" data-btmanifest="1027280358_main" data-c="1"></script>
 <link rel="preload" href="https://static.cdninstagram.com/rsrc.php/v4/yY/r/Eil-fzuGz0e.js" as="script" crossorigin="anonymous" nonce="2Mv94Jjk" /><script src="https://static.cdninstagram.com/rsrc.php/v4/yY/r/Eil-fzuGz0e.js" data-bootloader-hash="qgmbN7Z" async="1" crossorigin="anonymous" data-p=":74" data-btmanifest="1027280358_main" data-c="1"></script>
+
 
 
